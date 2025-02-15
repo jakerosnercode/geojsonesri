@@ -1,37 +1,26 @@
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
+    <title>ArcGIS Maps SDK - Display GeoJSON</title>
 
     <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/2.13.2/calcite.css" />
     <script type="module" src="https://js.arcgis.com/calcite-components/2.13.2/calcite.esm.js"></script>
 
-    <!-- Load the ArcGIS Maps SDK for JavaScript from CDN -->
+    <!-- Load ArcGIS Maps SDK -->
     <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css" />
     <script src="https://js.arcgis.com/4.31/"></script>
 
-    <!-- Load Map components from CDN-->
-    <script
-      type="module"
-      src="https://js.arcgis.com/map-components/4.31/arcgis-map-components.esm.js"
-    ></script>
+    <!-- Load ArcGIS Web Components -->
+    <script type="module" src="https://js.arcgis.com/map-components/4.31/arcgis-map-components.esm.js"></script>
 
 </head>
-
- 
-
-
-
-  <body>
+<body>
     <arcgis-map basemap="arcgis/topographic" center="-118.805, 34.027" zoom="13">
         <arcgis-zoom position="top-left"></arcgis-zoom>
-        const geojsonLayer = new GeoJSONLayer({
-            url: https://jakerosnercode.github.io/geojson1/
-            copyright: "GeoJSONLayer",
-            popupTemplate: template
-          });
+        <arcgis-feature-layer 
+            url="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson">
+        </arcgis-feature-layer>
     </arcgis-map>
-  </body>
-  </html>
+</body>
+</html>
